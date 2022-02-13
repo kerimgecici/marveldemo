@@ -22,10 +22,6 @@ const DetailPage = () => {
         dispatch(getCharacterByIdAsync(params.id));
     }, [])
 
-    useEffect(() => {
-        console.log(currentCharacter, comics)
-    }, [comics, currentCharacter])
-
     return (
         <>
             <Navigation />
