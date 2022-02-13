@@ -1,0 +1,31 @@
+.ant-col {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  .ant-card {
+    width: 360px !important;
+    @media screen and(max-width:1200px) {
+      width: 300px !important;
+    }
+    @media screen and(max-width:768px) {
+      width: calc(100% - 32px) !important;
+    }
+  }
+
+  .ant-card-cover {
+    img {
+      width: 360px;
+      height: 360px;
+      object-fit: left;
+
+      @media screen and(max-width:1200px) {
+        width: 300px;
+        height: 300px;
+      }
+      @media screen and(max-width:768px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

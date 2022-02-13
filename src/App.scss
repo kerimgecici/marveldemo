@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #202020;
+}
+
+.container {
+  padding-block: 138px 48px;
+
+  max-width: 1140px;
+  margin: 0 auto;
+  @media screen and(max-width:1200px) {
+    max-width: 960px;
+  }
+  @media screen and(max-width:992px) {
+    max-width: 760px;
+  }
+}

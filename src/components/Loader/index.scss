@@ -1,0 +1,51 @@
+:root {
+  --light-color: rgb(236, 29, 36, 0.2);
+  --dark-color: rgb(236, 29, 36);
+  --radius: 64px;
+  --ring-width: 4px;
+}
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ring position */
+.loading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* loading element style */
+.loading {
+  width: var(--radius);
+  height: var(--radius);
+  border-radius: 50%;
+  border: var(--ring-width) solid var(--light-color);
+}
+
+.loading:before {
+  display: block;
+  position: relative;
+  left: calc(var(--ring-width) * -1);
+  top: calc(var(--ring-width) * -1);
+  content: " ";
+  width: var(--radius);
+  height: var(--radius);
+  border-radius: 50%;
+  border: var(--ring-width) solid;
+  border-color: var(--dark-color) transparent transparent transparent;
+  animation: loading-rotate 0.8s ease-out infinite;
+}
+
+@keyframes loading-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
