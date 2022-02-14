@@ -15,7 +15,9 @@ export default function HomePage() {
     const characters = useSelector(selectCharacter())
 
     useEffect(() => {
-        dispatch(getCharacterAsync(0));
+        if (characters.length == 0) {
+            dispatch(getCharacterAsync(0));
+        }
     }, [])
 
 
